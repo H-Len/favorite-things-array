@@ -33,6 +33,25 @@
 //   $(".form").submit(function(event) {
 //     var favoritesInput = ["add1", "add2", "add3"];
 
+//
+// $(document).ready(function() {
+// $(".form").submit(function(event){
+//   var favorites = ["add1", "add2", "add3"];
+//   favorites.forEach(function(favorite) {
+//     var userInput = $("input" + favorites).val();
+//
+//      console.log("try one");
+//     $("." + favorite).text(userInput);
+//     $(".favoriteList").append("li" + favorites + "/li");
+//     $("#favoritesInput").show();
+//     console.log("woohoo");
+//     event.preventDefault();
+//   });
+//
+//
+//  });
+// });	});
+
 
 $(document).ready(function() {
   $(".form").submit(function(event){
@@ -42,9 +61,10 @@ $(document).ready(function() {
 
       console.log("try one");
       $("." + favorite).text(userInput);
-      // $(".favoriteList").append("<li>"+ userInput +"</li>");
+      $(".favoriteList").append("<li>"+ userInput +"</li>");
       $("#favoritesInput").show();
       console.log("woohoo");
+      console.log(".favoriteList");
       event.preventDefault();
     });
 
