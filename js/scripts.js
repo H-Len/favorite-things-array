@@ -42,7 +42,7 @@ $(document).ready(function() {
 
       console.log("try one");
       $("." + favorite).text(userInput);
-      $(".favoriteList").append("li" + favorites + "/li");
+      // $(".favoriteList").append("<li>"+ userInput +"</li>");
       $("#favoritesInput").show();
       console.log("woohoo");
       event.preventDefault();
