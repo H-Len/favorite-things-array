@@ -55,17 +55,14 @@
 
 $(document).ready(function() {
   $(".form").submit(function(event){
+    event.preventDefault();
     var favorites = ["add1", "add2", "add3"];
     favorites.forEach(function(favorite) {
-      var userInput = $("input" + favorites).val();
-
-      console.log("try one");
-      $("." + favorite).text(userInput);
+      var userInput = $("input#" + favorite).val();
+      $("#" + favorite).text(userInput);
       $(".favoriteList").append("<li>"+ userInput +"</li>");
-      $("#favoritesInput").show();
-      console.log("woohoo");
+      // $("#favoritesInput").show();
       console.log(".favoriteList");
-      event.preventDefault();
     });
 
 
